@@ -12,7 +12,22 @@ public class studentAppArrayList {
         int val = Integer.parseInt(reader.readLine());
         ArrayList<Student> myList = new ArrayList<Student>();
         myList = inputData(myList, val);
+        showdata (myList);
     }//main
+
+    private static void showdata(ArrayList<Student> myList) {
+        for (int i = 0;i< myList.size(); i++){
+            System.out.println("Student info"+(i+1)+" :");
+            System.out.println("Name: "+myList.get(i).getName());
+            System.out.println("Aeg: "+myList.get(i).getAge());
+            System.out.println("Gender: "+myList .get(i).getGender());
+            System.out.println("Height: "+myList .get(i).getHeight());
+
+
+        }
+
+
+    }
 
     private static ArrayList inputData(ArrayList<Student> myList, int val) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
